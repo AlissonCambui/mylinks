@@ -118,18 +118,107 @@
             transform: scale(1.1);
         }
 
-        /* O CSS para o botão temporário foi removido daqui */
+        /* --- Novo: Fundo Animado --- */
+        .background-icons {
+            position: fixed; /* Fica fixo na tela */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0; /* Fica atrás do .container */
+            overflow: hidden; /* Esconde ícones que saem da tela */
+        }
+
+        .background-icons i {
+            position: absolute;
+            bottom: -10vh; /* Começa fora da tela (embaixo) */
+            color: rgba(255, 255, 255, 0.08); /* Cor branca bem sutil */
+            animation: floatUp linear infinite;
+        }
+
+        /* Animação que faz os ícones subirem */
+        @keyframes floatUp {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-110vh); /* Sobe 110% da altura da tela */
+            }
+        }
+
+        /* Personalização individual de cada ícone */
+        .background-icons i:nth-child(1) { /* Balança (Direito) */
+            left: 10%;
+            font-size: 3em;
+            animation-duration: 25s; /* Duração da animação */
+            animation-delay: -5s; /* Começa em um ponto aleatório */
+        }
+        .background-icons i:nth-child(2) { /* GitHub (Código) */
+            left: 20%;
+            font-size: 2.5em;
+            animation-duration: 30s;
+            animation-delay: -2s;
+        }
+        .background-icons i:nth-child(3) { /* Gráfico (Monitoramento) */
+            left: 30%;
+            font-size: 4em;
+            animation-duration: 20s;
+            animation-delay: -10s;
+        }
+        .background-icons i:nth-child(4) { /* Martelo (Direito) */
+            left: 45%;
+            font-size: 2.5em;
+            animation-duration: 35s;
+            animation-delay: -7s;
+        }
+        .background-icons i:nth-child(5) { /* Código (Código) */
+            left: 60%;
+            font-size: 3em;
+            animation-duration: 22s;
+            animation-delay: -15s;
+        }
+        .background-icons i:nth-child(6) { /* Banco de Dados (Monitoramento) */
+            left: 75%;
+            font-size: 2.5em;
+            animation-duration: 28s;
+            animation-delay: -3s;
+        }
+        .background-icons i:nth-child(7) { /* Livro (Direito) */
+            left: 85%;
+            font-size: 4em;
+            animation-duration: 18s;
+            animation-delay: -8s;
+        }
+        .background-icons i:nth-child(8) { /* Laptop (Código) */
+            left: 90%;
+            font-size: 3em;
+            animation-duration: 26s;
+            animation-delay: -12s;
+        }
+        /* --- Fim do Fundo Animado --- */
     </style>
 </head>
 <body>
 
+    <!-- ÍCONES FLUTUANTES DE FUNDO -->
+    <div class="background-icons">
+        <i class="fas fa-balance-scale"></i>
+        <i class="fab fa-github"></i>
+        <i class="fas fa-chart-line"></i>
+        <i class="fas fa-gavel"></i>
+        <i class="fas fa-code"></i>
+        <i class="fas fa-database"></i>
+        <i class="fas fa-book"></i>
+        <i class="fas fa-laptop-code"></i>
+    </div>
+
     <div class="container">
         <!-- 1. Sua Foto de Perfil -->
         <!-- Troque pela URL da sua imagem -->
-        <img src="minha-foto.jpg" class="profile-pic">
+        <img src="minha-foto.jpg" alt="Foto do Perfil" class="profile-pic">
 
         <!-- 2. Seu Nome ou @Usuario -->
-        <h1 class="username">@SeuUsuario</h1>
+        <h1 class="username">@alisson.cambui</h1>
         
         <!-- 3. Pequena Descrição -->
         <p class="description">Confira minhas criações e projetos hospedados no GitHub Pages.</p>
@@ -175,7 +264,7 @@
                 <i class="fab fa-linkedin-in"></i>
             </a>
             <!-- NOVO LINK DO INSTAGRAM -->
-            <a href="#" target="_blank" title="Instagram">
+            <a href="https://www.instagram.com/alisson.cambui?igsh=NmR2c2Y1MXU4Z3ps" target="_blank" title="Instagram">
                 <i class="fab fa-instagram"></i>
             </a>
             <a href="#" target="_blank" title="Email">
@@ -187,5 +276,4 @@
     <!-- O SCRIPT do botão temporário FOI REMOVIDO DAQUI -->
 
 </body>
-
 </html>

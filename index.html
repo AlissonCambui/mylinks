@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Projetos</title>
+    
+    <!-- Opcional: Ícones (Font Awesome) para os botões -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- CSS Integrado -->
+    <style>
+        /* Importa uma fonte bonita do Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        /* Configurações Globais */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            /* Um fundo gradiente moderno */
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* O "cartão" principal que centraliza tudo */
+        .container {
+            max-width: 450px;
+            width: 100%;
+            /* Efeito de vidro (glassmorphism) */
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            text-align: center;
+        }
+
+        /* Foto de Perfil */
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #fff;
+            margin-bottom: 15px;
+        }
+
+        /* Textos */
+        .username {
+            font-size: 1.8em;
+            margin: 0 0 10px 0;
+            font-weight: 600;
+        }
+
+        .description {
+            font-size: 1em;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        /* Container dos botões */
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* Espaçamento entre os botões */
+        }
+
+        /* Estilo dos Botões de Link */
+        .link-button {
+            display: flex; /* Para alinhar ícone e texto */
+            align-items: center;
+            justify-content: center; /* Centraliza o conteúdo (ícone + texto) */
+            gap: 10px; /* Espaço entre ícone e texto */
+            
+            background: rgba(255, 255, 255, 0.9);
+            color: #333; /* Cor do texto do botão */
+            padding: 15px;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 1.1em;
+            
+            /* Animação suave */
+            transition: all 0.3s ease;
+        }
+
+        /* Efeito ao passar o mouse (Hover) */
+        .link-button:hover {
+            background: #fff;
+            color: #764ba2; /* Cor principal do gradiente */
+            transform: scale(1.03); /* Efeito de "saltar" */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Ícones Sociais (Rodapé) */
+        .social-links {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .social-links a {
+            color: #fff;
+            font-size: 1.8em;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #ddd;
+            transform: scale(1.1);
+        }
+
+        /* O CSS para o botão temporário foi removido daqui */
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- 1. Sua Foto de Perfil -->
+        <!-- Troque pela URL da sua imagem -->
+        <img src="https://placehold.co/150x150/764ba2/white?text=Sua+Foto" alt="Foto do Perfil" class="profile-pic">
+
+        <!-- 2. Seu Nome ou @Usuario -->
+        <h1 class="username">@SeuUsuario</h1>
+        
+        <!-- 3. Pequena Descrição -->
+        <p class="description">Confira minhas criações e projetos hospedados no GitHub Pages.</p>
+
+        <!-- 4. Seção de Links -->
+        <div class="links-container">
+            
+            <!-- Link 1 (Trabalho) -->
+            <a href="https://alissoncambui.github.io/Novopainel1/" target="_blank" class="link-button">
+                <i class="fas fa-chart-line"></i> <!-- Ícone -->
+                Painel de Monitoramento
+            </a>
+            
+            <!-- Link 2 (Estudo) -->
+            <a href="https://alissoncambui.github.io/hubestudante/" target="_blank" class="link-button">
+                <i class="fas fa-graduation-cap"></i> <!-- Ícone -->
+                Hub do Estudante de Direito
+            </a>
+
+            <!-- Link 3 (Estudo) -->
+            <a href="https://alissoncambui.github.io/simulador/" target="_blank" class="link-button">
+                <i class="fas fa-balance-scale"></i> <!-- Ícone -->
+                Simulador Jurídico
+            </a>
+
+            <!-- 
+              PARA ADICIONAR UM LINK PERMANENTE:
+              1. COPIE o bloco <a>...</a> de cima.
+              2. COLE-O aqui embaixo.
+              3. MUDE o href="#", o ícone (ex: fas fa-file-alt) e o texto.
+            -->
+
+        </div>
+
+        <!-- O BOTÃO DE ADICIONAR LINK (temporário) FOI REMOVIDO DAQUI -->
+
+        <!-- 5. Links Sociais (Rodapé) -->
+        <div class="social-links">
+            <a href="#" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="#" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <!-- NOVO LINK DO INSTAGRAM -->
+            <a href="#" target="_blank" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" target="_blank" title="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- O SCRIPT do botão temporário FOI REMOVIDO DAQUI -->
+
+</body>
+</html>
